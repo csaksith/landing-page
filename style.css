@@ -1,0 +1,260 @@
+
+html, body{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Roboto, sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+h1{
+    font-size: 48px;
+    font-weight: bold;
+    margin:0;
+    padding:0;
+}
+.header{
+    font-size:24px;
+    color:#F9FAF8;
+   padding:16px;
+   display:flex;
+   align-items: center;
+}
+
+.main-content button{
+    display:block;
+    text-align:center;
+    padding:2px 10px;
+    background-color:#3882f6;
+    color:white;
+    border-radius: 5px;
+    margin-top:10px;
+    font-size:30px;
+    
+}
+.nav-bar{
+background-color:#1F2937;
+color:#F9FAF8;
+display:flex;
+align-items: center;
+
+}
+
+.header{
+    width:84px;
+    height:84px;
+}
+
+.header-link{
+    display:flex;
+    align-items:center;
+    margin-left:auto;
+  padding:10px;
+}
+ul{
+    list-style: none;
+    display:flex;
+   gap:24px;
+   margin:0;
+   padding:0;
+}
+a{
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 18px;
+    padding:10px;
+}
+.main-content{
+    font-size: 18px;
+    color:#E5E7EB;
+    background-color:#1F2937;
+   padding-bottom:50px;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.main-header{
+    display:flex;
+    justify-content: center;
+    margin:30px;
+    padding:30px;
+}
+
+.main-header img{
+    border-radius: 100px;;
+    margin:30px;
+}
+
+.main-text{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.box-content{
+    display:flex;
+    justify-content: space-between; /* distributes cards evenly in 1 row on larger screens */
+    flex-wrap: wrap; /* alllows wrapping on smaller screens */
+    gap:24px; /* even spacing between cards */
+    margin:0 auto;
+    max-width:1200px;
+    padding:24px;
+}
+.card-title{
+    font-size:48px;
+    text-align:center;
+    display:block;
+    padding-top:96px;
+    font-weight:900;
+    color:#1F2937;
+    width:100%; /*expands the title to its entire width*/
+    
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    align-items : center;
+    padding: 24x;
+    width:calc(25%-48px); /* 4 cards in 1 row, adjusting for padding and gap */ 
+    box-sizing:border-box;
+}
+/* Add responsive behavior for smaller screens */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 48px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%; /* One card per row on small screens */
+    }
+}
+.card-pic{
+    width:200px;
+    height:200px;
+    border-radius: 10px;
+    border: 8px solid #3882F6;
+    object-fit: cover;
+}
+
+.card-text{
+    text-align: center;
+    flex-wrap:wrap;
+    max-width:200px;
+}
+
+.contents{
+    background-color: #E5E7EB;
+    padding:50px 70px;
+}
+.quote{
+    font-size: 36px;
+    font-style:italic;
+    color:#1F2937;
+    font-weight:lighter;
+
+}
+.thor{
+    text-align: right;
+    font-weight: 900;
+    font-size:24px;
+}
+.rag{
+height:auto;
+width:500px
+}
+
+.action-section {
+    display: flex; /* Horizontal layout for larger screens */
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Vertically align items */
+    background-color: #3882f6;
+    border-radius: 25px;
+    color: white;
+    width: 100%;
+    padding: 48px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.action-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Limit width for better design */
+    margin: 0 auto;
+}
+
+.action-text {
+    flex: 1; /* Allow the text to take up the remaining space */
+    margin-right: 24px; /* Add space between the text and button */
+}
+
+.action-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: left; /* Align text to the left */
+}
+
+.action-text p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    text-align: left; /* Align text to the left */
+}
+
+.su-button {
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    padding: 12px 24px;
+    background-color: #d9edf7; /* Light blue for the button */
+    color: #333; /* Contrast text color */
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.su-button:hover {
+    transform: scale(1.05); /* Slight enlarge effect on hover */
+    background-color: #c8e0ed; /* Lighter shade on hover */
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .action-section {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text alignment */
+    }
+
+    .action-text {
+        margin-right: 0; /* Remove margin for centered layout */
+        margin-bottom: 16px; /* Add spacing below text */
+    }
+
+    .su-button {
+        width: auto; /* Keep button width flexible */
+    }
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+    margin-top: auto; /* Push the footer to the bottom of the page */
+    text-align: center;
+    padding: 24px;
+    background-color: #1F2937; /* Dark footer background */
+    color: #E5E7EB; /* Light text color for contrast */
+    font-size: 14px;
+}
